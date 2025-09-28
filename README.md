@@ -1,6 +1,6 @@
 # 📝 Rudo - Your Comfy Corner for Thoughts
 
-![Rudo App Banner](https://raw.githubusercontent.com/Clay990/Rudo/main/assets/rudo-banner.png) A simple, modern note-taking app with a soft and comfortable user interface. Built with love using React Native, Expo, and Tailwind CSS.
+![Rudo App Banner](https://raw.githubusercontent.com/Clay990/Rudo/main/assets/images/icon.png) A simple, modern note-taking app with a soft and comfortable user interface. Built with love using React Native, Expo, and Tailwind CSS.
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 [![React Native](https://img.shields.io/badge/React_Native-20232A?style=for-the-badge&logo=react&logoColor=61DAFB)](https://reactnative.dev/)
