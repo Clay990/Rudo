@@ -43,7 +43,7 @@ You need to have Node.js, Watchman, and the Expo Go app on your phone.
 
 1.  **Clone the repository**
     ```sh
-    git clone [https://github.com/Clay990/Rudo.git](https://github.com/Clay990/Rudo.git)
+    git clone https://github.com/Clay990/Rudo.git
     ```
 
 2.  **Navigate to the project directory**
@@ -71,5 +71,5 @@ You need to have Node.js, Watchman, and the Expo Go app on your phone.
 -   **Framework:** [React Native](https://reactnative.dev/)
 -   **Platform:** [Expo](https://expo.dev/)
 -   **Styling:** [Tailwind CSS](https://tailwindcss.com/) via [NativeWind](https://www.nativewind.dev/)
--   **Language:** JavaScript / TypeScript
+-   **Language:** TypeScript
 
