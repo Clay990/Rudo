@@ -1,11 +1,12 @@
-import React from 'react';
-import { Box } from '@/components/ui/box';
-import { Text } from '@/components/ui/text';
-import { Button, ButtonText } from '@/components/ui/button';
-
-export default function Home() {
-
+import "./global.css"
+import { Text, View } from "react-native";
+ 
+export default function App() {
   return (
-    <Text>Hi</Text>
+    <View className="flex-1 items-center justify-center bg-white">
+      <Text className="text-xl font-bold text-blue-500">
+        Welcome to Nativewind!
+      </Text>
+    </View>
   );
 }
