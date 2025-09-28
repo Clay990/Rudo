@@ -1,5 +1,5 @@
 import React from 'react'
-import { View, Image, Button, Alert, TouchableOpacity, Text } from "react-native";
+import { View, Image, Button, Alert, TouchableOpacity, Text, ScrollView } from "react-native";
 import { SafeAreaProvider, SafeAreaView } from "react-native-safe-area-context";
 
 function home() {
@@ -12,16 +12,74 @@ function home() {
           <Image className="w-10 h-10" source={require('@/assets/images/fawn.gif')} />
         </View>
         <View className='mt-5 h-[1] bg-black'></View>
-        <Text className='text-3xl ml-5 mt-5'>Notes</Text>
+         <ScrollView>
+        <Text className='text-3xl ml-5 m-2'>Notes</Text>
+        {/* Note Card */}
         <View className='m-5'>
           <View className='rounded-2xl w-full h-80 rounded-lg p-4 border border-gray-400'>
+            <View className='flex-row justify-between'>
+              <View>
+
             <View className='rounded-xl w-[120] rounded-lg justify-center items-center border border-gray-400'>
             <Text className='text-sm'>Edit: Jan 24, 2025</Text>
           </View>
-          <Text className='text-3xl font-medium mt-5'>Home Work</Text>
-          <Text className='font-light mt-5'>Every utility class in Tailwind can be applied conditionally by adding a variant to the beginning of the class name that describes the condition you want to target.</Text>
+          <Text className='text-3xl font-medium mt-5'>Tailwind CSS</Text>
+              </View>
+          <Image className='w-20 h-20 rounded-xl' source={{uri: 'https://code.dlang.org/packages/tailwind-d/logo?s=650228a573eaa51f8ceded68'}} />
+           </View>
+          <Text className='font-light mt-5'>Tailwind CSS is a utility-first CSS framework for rapidly building modern websites and web applications. Unlike traditional frameworks like Bootstrap that provide pre-designed components, Tailwind gives developers low-level utility classes that can be combined directly within HTML to create completely custom designs.</Text>
           </View>
         </View>
+        {/* Note Card */}
+        <View className='m-5'>
+          <View className='rounded-2xl w-full h-80 rounded-lg p-4 border border-gray-400'>
+            <View className='flex-row justify-between'>
+              <View>
+
+            <View className='rounded-xl w-[120] rounded-lg justify-center items-center border border-gray-400'>
+            <Text className='text-sm'>Edit: Jan 24, 2025</Text>
+          </View>
+          <Text className='text-3xl font-medium mt-5'>Tailwind CSS</Text>
+              </View>
+          <Image className='w-20 h-20 rounded-xl' source={{uri: 'https://code.dlang.org/packages/tailwind-d/logo?s=650228a573eaa51f8ceded68'}} />
+           </View>
+          <Text className='font-light mt-5'>Tailwind CSS is a utility-first CSS framework for rapidly building modern websites and web applications. Unlike traditional frameworks like Bootstrap that provide pre-designed components, Tailwind gives developers low-level utility classes that can be combined directly within HTML to create completely custom designs.</Text>
+          </View>
+        </View>
+        {/* Note Card */}
+        <View className='m-5'>
+          <View className='rounded-2xl w-full h-80 rounded-lg p-4 border border-gray-400'>
+            <View className='flex-row justify-between'>
+              <View>
+
+            <View className='rounded-xl w-[120] rounded-lg justify-center items-center border border-gray-400'>
+            <Text className='text-sm'>Edit: Jan 24, 2025</Text>
+          </View>
+          <Text className='text-3xl font-medium mt-5'>Tailwind CSS</Text>
+              </View>
+          <Image className='w-20 h-20 rounded-xl' source={{uri: 'https://code.dlang.org/packages/tailwind-d/logo?s=650228a573eaa51f8ceded68'}} />
+           </View>
+          <Text className='font-light mt-5'>Tailwind CSS is a utility-first CSS framework for rapidly building modern websites and web applications. Unlike traditional frameworks like Bootstrap that provide pre-designed components, Tailwind gives developers low-level utility classes that can be combined directly within HTML to create completely custom designs.</Text>
+          </View>
+        </View>
+        {/* Note Card */}
+        <View className='m-5'>
+          <View className='rounded-2xl w-full h-80 rounded-lg p-4 border border-gray-400'>
+            <View className='flex-row justify-between'>
+              <View>
+
+            <View className='rounded-xl w-[120] rounded-lg justify-center items-center border border-gray-400'>
+            <Text className='text-sm'>Edit: Jan 24, 2025</Text>
+          </View>
+          <Text className='text-3xl font-medium mt-5'>Tailwind CSS</Text>
+              </View>
+          <Image className='w-20 h-20 rounded-xl' source={{uri: 'https://code.dlang.org/packages/tailwind-d/logo?s=650228a573eaa51f8ceded68'}} />
+           </View>
+          <Text className='font-light mt-5'>Tailwind CSS is a utility-first CSS framework for rapidly building modern websites and web applications. Unlike traditional frameworks like Bootstrap that provide pre-designed components, Tailwind gives developers low-level utility classes that can be combined directly within HTML to create completely custom designs.</Text>
+          </View>
+        </View>
+
+        </ScrollView>
       </SafeAreaView>
     </SafeAreaProvider>
   )
