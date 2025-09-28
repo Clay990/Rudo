@@ -4,7 +4,17 @@ module.exports = {
   content: ["./app/**/*.{js,jsx,ts,tsx}", "./components/**/*.{js,jsx,ts,tsx}"],
   presets: [require("nativewind/preset")],
   theme: {
-    extend: {},
+    extend: {
+      fontFamily: {
+        'alan-sans-black': ['AlanSans-Black'],
+        'alan-sans-bold': ['AlanSans-Bold'],
+        'alan-sans-extrabold': ['AlanSans-ExtraBold'],
+        'alan-sans-light': ['AlanSans-Light'],
+        'alan-sans-medium': ['AlanSans-Medium'],
+        'alan-sans-regular': ['AlanSans-Regular'],
+        'alan-sans-semibold': ['AlanSans-SemiBold'],
+      },
+    },
   },
   plugins: [],
 }
