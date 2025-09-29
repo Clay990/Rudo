@@ -17,7 +17,7 @@ function home() {
     <SafeAreaProvider>
       <SafeAreaView className="flex-1">
 
-        <View className="mt-8 ml-5 h-[50] flex-row items-center justify-between pr-5">
+        <View className="mt-4 ml-5 h-[50] flex-row items-center justify-between pr-5">
           <Text className="text-black font-bold text-3xl">Good Morning, Clay</Text>
           <Image className="w-10 h-10" source={require('@/assets/images/fawn.gif')} />
         </View>

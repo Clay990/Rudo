@@ -1,6 +1,5 @@
 import React from 'react'
 import { SafeAreaProvider, SafeAreaView } from "react-native-safe-area-context";
-import "./global.css"
 import { View, Image, Button, Alert, TouchableOpacity, Text, ScrollView } from "react-native";
 import { FontAwesomeIcon } from '@fortawesome/react-native-fontawesome'
 import { library } from '@fortawesome/fontawesome-svg-core';
@@ -39,16 +38,19 @@ library.add(
 
 function profile() {
     return (
-        <SafeAreaProvider>
-            <SafeAreaView className="flex-1">
+        // <SafeAreaProvider>
+        //     <SafeAreaView className="flex-1">
                 <View className="bg-white flex-1 flex-col">
 
                     <View className="flex-[1] flex-col bg-yellow-200 justify-center items-center rounded-b-[50px]">
+                        <View className='mt-10 flex-col justify-center items-center'>
+
                         <Image
                             source={{ uri: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTOGmbVlXYi1BEuOw7ySL36qCQ7BvT5jqzxvg&s' }}
                             className='w-36 h-36 rounded-full'
-                        />
-                        <Text className='mt-5 font-medium text-3xl'>Clay Jensen</Text>
+                            />
+                        <Text className='mt-3 font-medium text-3xl'>Clay Jensen</Text>
+                            </View>
                     </View>
 
 
@@ -78,8 +80,8 @@ function profile() {
                         </View>
                     </View>
                 </View>
-            </SafeAreaView>
-        </SafeAreaProvider>
+        //     </SafeAreaView>
+        // </SafeAreaProvider>
     )
 }
 
