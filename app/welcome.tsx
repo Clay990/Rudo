@@ -22,7 +22,7 @@ export default function Welcome() {
           <Text className="font-alan-sans-bold text-4xl ">Take Notes in this</Text>
           <Text className="pt-4 font-alan-sans-bold text-4xl " >New modern Rudo app</Text>
           <Text className="pt-5 font-alan-sans-regular">Do your note taking anywhere anytime</Text>
-            
+
           <TouchableOpacity onPress={handleStart}>
             <View className="overflow-hidden mt-10 rounded-xl bg-pink-400 justify-center items-center h-[50]">
               <Text className="text-white font-bold text-xl">Get Started</Text>
