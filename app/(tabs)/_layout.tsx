@@ -63,25 +63,6 @@ export default function TabLayout() {
           ),
         }}
       />
-      <Tabs.Screen
-        name="test"
-        options={{
-          tabBarIcon: ({ focused }) => (
-            <View className="items-center justify-center mt-5">
-              <FontAwesomeIcon 
-                icon={faUser} 
-                size={22} 
-                color={focused ? 'rgba(255, 237, 132, 1)' : '#6b7280'}
-              />
-              <Text 
-                className={`text-xs ${focused ? 'text-yellow-300' : 'text-gray-500'}`}
-              >
-                Test
-              </Text>
-            </View>
-          ),
-        }}
-      />
     </Tabs>
   );
 }
