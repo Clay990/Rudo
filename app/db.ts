@@ -1,4 +1,3 @@
-// db.ts
 import * as SQLite from "expo-sqlite";
 import uuid from "react-native-uuid";
 
