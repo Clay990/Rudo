@@ -28,11 +28,11 @@ function note() {
   }, []);
   useFocusEffect(
     React.useCallback(() => {
-      // ✅ This runs every time the screen comes into focus
-      loadNotes(); // your function to fetch notes from SQLite or AsyncStorage
+
+      loadNotes();
 
       return () => {
-        // optional cleanup
+
       };
     }, [])
   );
@@ -75,27 +75,26 @@ function note() {
       className='flex-1 p-5 bg-white'
       behavior={Platform.OS === 'ios' ? 'padding' : 'height'}
     >
-      {/* This View will grow to take up all available space */}
+
       <View className='flex-1'>
         <TextInput
-          className='font-bold text-3xl mb-4' // Added margin-bottom for spacing
+          className='font-bold text-3xl mb-4'
           onChangeText={setTitle}
           value={title}
           placeholder="Title"
-          maxLength={30} // Increased max length slightly
+          maxLength={30}
         />
         <TextInput
-          className='flex-1 text-xl text-top' // flex-1 makes it expand, text-top aligns text to the top
+          className='flex-1 text-xl text-top'
           onChangeText={setContent}
           value={content}
           multiline={true}
           keyboardType="default"
           placeholder="Write your note here..."
-          textAlignVertical="top" // Important for Android multiline placeholder
+          textAlignVertical="top"
         />
       </View>
 
-      {/* This View will be pushed to the bottom */}
       <View className='flex-row justify-between items-center mt-4'>
         <Pressable
           className='bg-red-300 rounded-xl h-12 w-28 justify-center items-center'

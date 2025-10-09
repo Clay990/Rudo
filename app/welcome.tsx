@@ -2,12 +2,19 @@ import { SafeAreaProvider, SafeAreaView } from "react-native-safe-area-context";
 import "./global.css"
 import { View, Image, Button, Alert, TouchableOpacity, Text } from "react-native";
 import { useRouter } from "expo-router";
+import AsyncStorage from "@react-native-async-storage/async-storage";
+import { NavigationContainer } from "@react-navigation/native";
+import { createStackNavigator } from "@react-navigation/stack";
 
 export default function Welcome() {
   const router = useRouter();
   const handleStart = () => {
     router.push('/home');
   }
+  const handleContinue = async () => {
+    await AsyncStorage.setItem("isFirstTime", "true");
+    router.replace("/(tabs)/home");
+  };
   return (
     <SafeAreaProvider>
       <SafeAreaView className="flex-1">

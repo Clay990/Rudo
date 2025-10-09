@@ -1,6 +1,6 @@
 import React from 'react'
 import { SafeAreaProvider, SafeAreaView } from "react-native-safe-area-context";
-import { View, Image, Button, Alert, TouchableOpacity, Text, ScrollView } from "react-native";
+import { View, Image, Button, Alert, TouchableOpacity, Text, ScrollView,  } from "react-native";
 import { FontAwesomeIcon } from '@fortawesome/react-native-fontawesome'
 import { library } from '@fortawesome/fontawesome-svg-core';
 
@@ -19,6 +19,7 @@ import {
     faSquareCheck, 
     faPencil 
 } from '@fortawesome/free-solid-svg-icons'; 
+import { router } from 'expo-router';
 
 // icons for settings set in future when components seperate to the file
 library.add(
@@ -63,8 +64,10 @@ function profile() {
                             <View className=''>
                                 <ScrollView showsHorizontalScrollIndicator={false}
                                     showsVerticalScrollIndicator={false} >
-                                        
+                                        <TouchableOpacity onPress={() => router.push('/settings/profile')}>
                                     <Text className='mt-10 font-medium text-xl'>Profile</Text>
+                                        </TouchableOpacity>
+                                        
                                     <Text className='mt-10 font-medium text-xl'>Appearance</Text>
                                     <Text className='mt-10 font-medium text-xl'>Notifications</Text>
                                     <Text className='mt-10 font-medium text-xl'>Backup & Restore</Text>
