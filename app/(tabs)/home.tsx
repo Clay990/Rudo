@@ -5,6 +5,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-native-fontawesome'
 import { library } from '@fortawesome/fontawesome-svg-core';
 import { faSquareCheck, faPlus } from '@fortawesome/free-solid-svg-icons';
 import { useRouter, useFocusEffect } from "expo-router";
+import AsyncStorage from "@react-native-async-storage/async-storage";
 import { useState, useEffect } from "react";
 import { initDB, saveNote, getNotes, deleteNote, updateNote, Note } from "../../lib/db";
 
@@ -45,7 +46,7 @@ function home() {
     setNotes(data);
   };
 
-  const handleAdd = () => {
+  const handleAdd = async () => {
     router.push('/note');
   }
 

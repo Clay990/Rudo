@@ -1,13 +1,13 @@
-
 import { useFonts } from 'expo-font';
 import { Stack } from "expo-router";
 import React, { useEffect, useState } from "react";
-import { ActivityIndicator } from "react-native";
+import { View, ActivityIndicator } from "react-native";
 import AsyncStorage from "@react-native-async-storage/async-storage";
 
 export default function RootLayout() {
-  const [firstTime, setFirstTime] = useState(false);
-  const [loading, setLoading] = useState(true);
+  // FIX: Explicitly define the type for the state variable
+  const [isFirstTime, setIsFirstTime] = useState<boolean | null>(null);
+  
   const [fontsLoaded] = useFonts({
     'AlanSans-Black': require('../assets/fonts/AlanSans-Black.ttf'),
     'AlanSans-Bold': require('../assets/fonts/AlanSans-Bold.ttf'),
@@ -17,30 +17,37 @@ export default function RootLayout() {
     'AlanSans-Regular': require('../assets/fonts/AlanSans-Regular.ttf'),
     'AlanSans-SemiBold': require('../assets/fonts/AlanSans-SemiBold.ttf'),
   });
+
   useEffect(() => {
     const checkFirstTime = async () => {
-
-      const value = await AsyncStorage.getItem("isFirstTime");
-      setFirstTime(!value);
-      setLoading(false);
+      try {
+        const value = await AsyncStorage.getItem("firstTime");
+   
+        setIsFirstTime(value === null); 
+      } catch (error) {
+        console.error("Error reading from AsyncStorage", error);
+      
+        setIsFirstTime(true);
+      }
     };
     checkFirstTime();
   }, []);
-  if (loading) return <ActivityIndicator size="large" style={{ flex: 1 }} />;
 
-
-  if (!fontsLoaded) {
-    return null;
+  if (!fontsLoaded || isFirstTime === null) {
+    return (
+      <View style={{ flex: 1, justifyContent: 'center', alignItems: 'center' }}>
+        <ActivityIndicator size="large" />
+      </View>
+    );
   }
 
   return (
     <Stack screenOptions={{ headerShown: false }}>
-      {firstTime ? (
+      {isFirstTime ? (
         <Stack.Screen name="welcome" />
       ) : (
-        <Stack.Screen name="(tabs)" />
+        <Stack.Screen name="(tabs)" /> 
       )}
-      <Stack.Screen name="note" />
     </Stack>
   );
 }
