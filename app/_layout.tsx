@@ -3,6 +3,7 @@ import { Stack } from "expo-router";
 import React, { useEffect, useState } from "react";
 import { View, ActivityIndicator } from "react-native";
 import AsyncStorage from "@react-native-async-storage/async-storage";
+import { registerForPushNotificationsAsync } from '@/lib/NotificationService';
 
 export default function RootLayout() {
   // FIX: Explicitly define the type for the state variable
@@ -31,6 +32,7 @@ export default function RootLayout() {
       }
     };
     checkFirstTime();
+      // registerForPushNotificationsAsync();
   }, []);
 
   if (!fontsLoaded || isFirstTime === null) {

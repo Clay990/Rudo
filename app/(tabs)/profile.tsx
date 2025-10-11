@@ -67,8 +67,10 @@ function profile() {
                                         <TouchableOpacity onPress={() => router.push('/settings/profile')}>
                                     <Text className='mt-10 font-medium text-xl'>Profile</Text>
                                         </TouchableOpacity>
-                                        
+                                            <TouchableOpacity onPress={() => router.push('/settings/appearance')}>
+
                                     <Text className='mt-10 font-medium text-xl'>Appearance</Text>
+                                            </TouchableOpacity>
                                     <Text className='mt-10 font-medium text-xl'>Notifications</Text>
                                     <Text className='mt-10 font-medium text-xl'>Backup & Restore</Text>
                                     <Text className='mt-10 font-medium text-xl'>Collaboration</Text>
